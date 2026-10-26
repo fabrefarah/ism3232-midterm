@@ -1,13 +1,12 @@
-
 from business_rules import (
-    calculate_food_cost,
-    get_event_discount,
     calculate_event_total,
-    needs_signoff,
-    needs_second_chef,
-    total_booked,
-    largest_event,
+    calculate_food_cost,
     format_event_line,
+    get_event_discount,
+    largest_event,
+    needs_second_chef,
+    needs_signoff,
+    total_booked,
 )
 
 
@@ -137,6 +136,4 @@ def test_largest_event_empty():
 # 20. Test formatted event report line
 def test_format_event_line():
     result = format_event_line("Finch Law", 435.00, False, False)
-    assert result == (
-        "Finch Law: $435.00 | sign-off: no | second chef: no"
-    )
+    assert result == ("Finch Law: $435.00 | sign-off: no | second chef: no")
